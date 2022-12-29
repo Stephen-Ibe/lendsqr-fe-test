@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ErrorBoundary from './utils/ErrorBoundary';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  <StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
     <App />
-  </React.StrictMode>
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
