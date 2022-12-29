@@ -1,6 +1,7 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/css/index.css';
+import './assets/css/tailwind.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ErrorBoundary from './utils/ErrorBoundary';
@@ -13,7 +14,6 @@ root.render(
     <ErrorBoundary>
       <App />
     </ErrorBoundary>
-    <App />
   </StrictMode>
 );
 
