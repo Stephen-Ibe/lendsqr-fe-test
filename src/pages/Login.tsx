@@ -22,22 +22,22 @@ const Login = () => {
               <p>Enter details to login</p>
             </div>
             <form>
-              <div>
+              <div className='border'>
                 <input
                   type='email'
                   placeholder='Email'
-                  className='border w-full py-4 px-4 rounded-md'
+                  className='inputField'
                 />
               </div>
-              <div className=''>
+              <div className='border relative'>
                 <input
                   type='password'
-                  placeholder='Email'
-                  className='border w-full'
+                  placeholder='Password'
+                  className='inputField'
                 />
               </div>
               <Link to='/'>Forgot Password?</Link>
-              <button>Log In</button>
+              <button type='submit'>Log In</button>
             </form>
           </div>
         </section>

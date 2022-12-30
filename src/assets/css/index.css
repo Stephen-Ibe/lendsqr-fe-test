@@ -26,6 +26,12 @@ html .fitWidth,
 body .fitWidth {
   width: fit-content; }
 
+html .inputField,
+body .inputField {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px; }
+
 html .login,
 body .login {
   height: 100vh;
@@ -35,7 +41,7 @@ body .login {
 html .login .content,
 body .login .content {
   display: hidden;
-  border: 1px solid red; }
+  background-color: #fcfcfc; }
 
 @media screen and (min-width: 768px) {
   html .login .content,
