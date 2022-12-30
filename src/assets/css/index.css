@@ -6,6 +6,96 @@
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
+:root {
+  --lendsqr-main: #213F7D;
+  --lendsqr-teal: #39CDCC;
+  --lendsqr-grey: #545F7D
+; }
+
 html,
 body {
-  font-family: 'AvenirRegular', sans-serif; }
+  font-family: 'AvenirRegular', sans-serif;
+  color: var(--lendsqr-grey);
+  font-style: normal; }
+
+html .half_container,
+body .half_container {
+  width: 50%; }
+
+html .fitWidth,
+body .fitWidth {
+  width: fit-content; }
+
+html .login,
+body .login {
+  height: 100vh;
+  display: flex;
+  justify-content: center; }
+
+html .login .content,
+body .login .content {
+  display: hidden;
+  border: 1px solid red; }
+
+@media screen and (min-width: 768px) {
+  html .login .content,
+  body .login .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; } }
+
+html .login .content .logo,
+body .login .content .logo {
+  position: relative;
+  bottom: 30%; }
+
+html .login .form_container,
+body .login .form_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+html .login .form_container .form_content,
+body .login .form_container .form_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem; }
+
+html .login .form_container .form_content .message h1,
+body .login .form_container .form_content .message h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--lendsqr-main);
+  font-family: 'AvenirBold', sans-serif;
+  letter-spacing: -0.04em; }
+
+html .login .form_container .form_content .message p,
+body .login .form_container .form_content .message p {
+  font-weight: 400;
+  font-size: 20px; }
+
+html .login .form_container .form_content form,
+body .login .form_container .form_content form {
+  display: flex;
+  flex-direction: column;
+  width: 66.67%;
+  row-gap: 2rem; }
+
+html .login .form_container .form_content form a,
+body .login .form_container .form_content form a {
+  color: var(--lendsqr-teal);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase; }
+
+html .login .form_container .form_content form button,
+body .login .form_container .form_content form button {
+  background: var(--lendsqr-teal);
+  color: white;
+  padding: 14px 0px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  border-radius: 8px; }

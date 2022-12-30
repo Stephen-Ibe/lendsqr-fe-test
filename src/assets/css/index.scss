@@ -7,7 +7,102 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --lendsqr-main: #213F7D;
+  --lendsqr-teal: #39CDCC;
+  --lendsqr-grey: #545F7D
+}
+
 html,
 body {
   font-family: 'AvenirRegular', sans-serif;
+  color: var(--lendsqr-grey);
+  font-style: normal;
+
+  .half_container {
+    width: 50%;
+  }
+
+  .fitWidth {
+    width: fit-content;
+  }
+
+  .login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    .content {
+      display: hidden;
+      border: 1px solid red;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .logo {
+        position: relative;
+        bottom: 30%;
+      }
+    }
+
+    .form_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .form_content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+
+        .message {
+          h1 {
+            font-weight: 700;
+            font-size: 40px;
+            color: var(--lendsqr-main);
+            font-family: 'AvenirBold', sans-serif;
+            letter-spacing: -0.04em;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 20px;
+          }
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          width: 66.67%;
+          row-gap: 2rem;
+
+          a {
+            color: var(--lendsqr-teal);
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+
+          button {
+            background: var(--lendsqr-teal);
+            color: white;
+            padding: 14px 0px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            border-radius: 8px;
+          }
+        }
+      }
+
+
+    }
+
+
+  }
 }
