@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { ChangeEvent, SyntheticEvent, useState } from 'react';
 import Logo from '../assets/images/logo.svg';
 import SigninImg from '../assets/images/signin.svg';
 import { Link } from 'react-router-dom';
 import useToggle from '../hooks/useToggle';
 import Button from '../components/common/button/Index';
+import InputField from '../components/common/inputFields/InputField';
 
 const Login = () => {
   const [showPassword, toggle] = useToggle(false);
+  const [formData, setFormData] = useState<Record<string, string>>({
+    email: 'me',
+    password: '',
+  });
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e:SyntheticEvent) => {
+    e.preventDefault();
+    console.log(formData);
+  };
 
   return (
     <div>
@@ -32,29 +47,36 @@ const Login = () => {
               <h1>Welcome!</h1>
               <p>Enter details to login</p>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className='border'>
-                <input
+                <InputField
                   type='email'
                   placeholder='Email'
-                  className='input_field'
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  name='email'
+                  required
                 />
               </div>
-              <div className='border relative password_container'>
-                <input
+              <div className='password_container'>
+                <InputField
                   type={showPassword ? 'text' : 'password'}
                   placeholder='Password'
-                  className='input_field'
+                  value={formData.password}
+                  onChange={handleInputChange}
+                  name='password'
+                  required
                 />
+
                 <span
                   className='absolute top-5 right-4 cursor-pointer'
                   onClick={toggle}
                 >
-                  Show
+                  {showPassword ? 'Hide' : 'Show'}
                 </span>
               </div>
               <Link to='/'>Forgot Password?</Link>
-              <Button onClick={() => alert('hello')}>Log In</Button>
+              <Button type='submit'>Log In</Button>
             </form>
           </div>
         </section>

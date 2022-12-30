@@ -125,7 +125,9 @@ body .login .form_container .form_content form a {
 
 html .login .form_container .form_content form .password_container,
 body .login .form_container .form_content form .password_container {
-  border-radius: 6px; }
+  border-radius: 6px;
+  position: relative;
+  border-width: 1px; }
 
 html .login .form_container .form_content form .password_container span,
 body .login .form_container .form_content form .password_container span {

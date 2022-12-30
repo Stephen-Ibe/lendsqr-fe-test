@@ -117,6 +117,8 @@ body {
 
           .password_container {
             border-radius: 6px;
+            position: relative;
+            border-width: 1px;
 
             span {
               color: var(--lendsqr-teal);

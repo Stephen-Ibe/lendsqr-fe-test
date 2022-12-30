@@ -2,12 +2,13 @@ import React, { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
-  onClick(): void;
+  onClick?: () => void;
   buttonStyle?: string;
+  type: 'button' | 'reset' | 'submit';
 };
 
-const Button = ({ children, onClick, buttonStyle }: Props) => (
-  <button type='button' onClick={onClick} className={buttonStyle}>
+const Button = ({ children, onClick, buttonStyle, type }: Props) => (
+  <button type={type} onClick={onClick} className={buttonStyle}>
     {children}
   </button>
 );
