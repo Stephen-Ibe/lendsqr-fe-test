@@ -59,7 +59,8 @@ body .login .content {
 html .login .content .logo,
 body .login .content .logo {
   position: relative;
-  bottom: 30%; }
+  bottom: 20%;
+  left: 4rem; }
 
 html .login .form_container,
 body .login .form_container {

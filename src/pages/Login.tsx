@@ -12,11 +12,18 @@ const Login = () => {
     <div>
       <section className='login'>
         <section className='half_container content p-14'>
-          <div className='border w-fit logo'>
+          <div className='logo'>
             <img src={Logo} alt='LendSqr_logo' />
           </div>
-          <div className='flex justify-center items-center border w-fit'>
-            <img src={SigninImg} alt='LendSqr_logo' />
+
+          <div className='flex justify-center items-center '>
+            <div className='img_container relative w-[80%] h-[400px]'>
+              <img
+                src={SigninImg}
+                alt='LendSqr_logo'
+                className='object-contain absolute w-full h-full'
+              />
+            </div>
           </div>
         </section>
         <section className='half_container form_container'>
