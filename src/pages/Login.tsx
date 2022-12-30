@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Logo from '../assets/images/logo.svg';
 import SigninImg from '../assets/images/signin.svg';
 import { Link } from 'react-router-dom';
 import useToggle from '../hooks/useToggle';
 
 const Login = () => {
-  // const [showPassword, setShowPassword] = useState<boolean>(false);
-
   const [showPassword, toggle] = useToggle(false);
 
   return (
