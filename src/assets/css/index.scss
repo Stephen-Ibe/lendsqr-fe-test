@@ -20,7 +20,11 @@ body {
   font-style: normal;
 
   .half_container {
-    width: 50%;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
   }
 
   .fitWidth {
@@ -40,7 +44,7 @@ body {
     justify-content: center;
 
     .content {
-      display: hidden;
+      display: none;
       background-color: #fcfcfc;
 
       @media screen and (min-width: 768px) {
@@ -62,11 +66,22 @@ body {
       align-items: center;
 
       .form_content {
-        display: flex;
-        flex-direction: column;
-        row-gap: 3rem;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+          display: flex;
+          flex-direction: column;
+          row-gap: 3rem;
+          width: 63.337%;
+        }
 
         .message {
+          padding: 0px 20px;
+
+          @media screen and (min-width: 768px) {
+            padding: unset;
+          }
+
           h1 {
             font-weight: 700;
             font-size: 40px;
@@ -84,8 +99,13 @@ body {
         form {
           display: flex;
           flex-direction: column;
-          width: 83.33%;
+          padding: 0px 20px;
           row-gap: 2rem;
+
+          @media screen and (min-width: 768px) {
+            width: 83.33%;
+            padding: unset;
+          }
 
           a {
             color: var(--lendsqr-teal);

@@ -3,6 +3,7 @@ import Logo from '../assets/images/logo.svg';
 import SigninImg from '../assets/images/signin.svg';
 import { Link } from 'react-router-dom';
 import useToggle from '../hooks/useToggle';
+import Button from '../components/common/button/Index';
 
 const Login = () => {
   const [showPassword, toggle] = useToggle(false);
@@ -19,12 +20,12 @@ const Login = () => {
           </div>
         </section>
         <section className='half_container form_container'>
-          <div className='w-8/12 form_content'>
+          <div className='form_content'>
             <div className='message'>
               <h1>Welcome!</h1>
               <p>Enter details to login</p>
             </div>
-            <form className='w-10/12'>
+            <form>
               <div className='border'>
                 <input
                   type='email'
@@ -46,7 +47,7 @@ const Login = () => {
                 </span>
               </div>
               <Link to='/'>Forgot Password?</Link>
-              <button type='submit'>Log In</button>
+              <Button onClick={() => alert('hello')}>Log In</Button>
             </form>
           </div>
         </section>
