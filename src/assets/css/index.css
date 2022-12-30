@@ -16,7 +16,8 @@ html,
 body {
   font-family: 'AvenirRegular', sans-serif;
   color: var(--lendsqr-grey);
-  font-style: normal; }
+  font-style: normal;
+  background-color: #E5E5E5; }
 
 html .half_container,
 body .half_container {
@@ -146,3 +147,53 @@ body .login .form_container .form_content form button {
   font-size: 14px;
   line-height: 19px;
   border-radius: 8px; }
+
+html nav,
+body nav {
+  background-color: #ffffff;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 3rem; }
+
+html nav .search,
+body nav .search {
+  display: flex;
+  align-items: center;
+  border-width: 1.5px;
+  width: 30%;
+  border-radius: 6px; }
+
+html nav .search input,
+body nav .search input {
+  padding: .5rem;
+  border-radius: 6px; }
+
+html nav .search input::placeholder,
+body nav .search input::placeholder {
+  font-size: 12px;
+  padding: 0px 0px 0px 4px; }
+
+html nav .search div,
+body nav .search div {
+  padding: .75rem 1.2rem;
+  background-color: var(--lendsqr-teal);
+  color: #ffffff;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  cursor: pointer; }
+
+html nav .actions,
+body nav .actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1.5rem; }
+
+html nav .actions a,
+body nav .actions a {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: underline; }

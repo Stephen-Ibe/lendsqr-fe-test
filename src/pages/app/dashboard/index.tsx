@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fetchUsersRecords from '../../../utils/apis/User';
+import TopNav from '../../../components/blocks/topnav';
 
 type Props = {};
 
@@ -25,7 +26,12 @@ const Dashboard = (props: Props) => {
     };
   }, []);
 
-  return <div>Dashboard</div>;
+  return (
+    <>
+      <TopNav />
+      <main>Hello</main>
+    </>
+  );
 };
 
 export default Dashboard;
