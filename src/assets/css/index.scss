@@ -27,10 +27,11 @@ body {
     width: fit-content;
   }
 
-  .inputField {
+  .input_field {
     width: 100%;
     padding: 1rem;
     border-radius: 6px;
+    border: transparent;
   }
 
   .login {
@@ -83,7 +84,7 @@ body {
         form {
           display: flex;
           flex-direction: column;
-          width: 66.67%;
+          width: 83.33%;
           row-gap: 2rem;
 
           a {
@@ -93,10 +94,21 @@ body {
             text-transform: uppercase;
           }
 
+          .password_container {
+            border-radius: 6px;
+
+            span {
+              color: var(--lendsqr-teal);
+              font-weight: 600;
+              font-size: 12px;
+              text-transform: uppercase;
+            }
+          }
+
           button {
             background: var(--lendsqr-teal);
             color: white;
-            padding: 14px 0px;
+            padding: 16px 0px;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 14px;
