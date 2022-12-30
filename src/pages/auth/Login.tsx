@@ -1,10 +1,10 @@
 import React, { ChangeEvent, SyntheticEvent, useState } from 'react';
-import Logo from '../assets/images/logo.svg';
-import SigninImg from '../assets/images/signin.svg';
+import Logo from '../../assets/images/logo.svg';
+import SigninImg from '../../assets/images/signin.svg';
 import { Link } from 'react-router-dom';
-import useToggle from '../hooks/useToggle';
-import Button from '../components/common/button/Index';
-import InputField from '../components/common/inputFields/InputField';
+import useToggle from '../../hooks/useToggle';
+import Button from '../../components/common/button/Index';
+import InputField from '../../components/common/inputFields/InputField';
 
 const Login = () => {
   const [showPassword, toggle] = useToggle(false);
@@ -18,7 +18,7 @@ const Login = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e:SyntheticEvent) => {
+  const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
     console.log(formData);
   };

@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { useRoutes } from 'react-router';
 
-const Login = lazy(() => import('../pages/Login'));
+const Login = lazy(() => import('../pages/auth/Login'));
 
 const AppRoutes = () => {
   const allRoutes = useRoutes([
