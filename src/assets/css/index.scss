@@ -18,7 +18,7 @@ body {
   font-family: 'AvenirRegular', sans-serif;
   color: var(--lendsqr-grey);
   font-style: normal;
-  background-color: #E5E5E5;
+  overflow-x: hidden;
 
   .half_container {
     width: 100%;
@@ -167,10 +167,12 @@ body {
       input {
         padding: .5rem;
         border-radius: 6px;
+        outline: none;
+        border: none;
+        font-size: 12px;
 
         &::placeholder {
-          font-size: 12px;
-          padding: 0px 0px 0px 4px;
+          padding: 0px 0px 0px 2px;
         }
       }
 

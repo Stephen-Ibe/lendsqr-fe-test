@@ -17,7 +17,7 @@ body {
   font-family: 'AvenirRegular', sans-serif;
   color: var(--lendsqr-grey);
   font-style: normal;
-  background-color: #E5E5E5; }
+  overflow-x: hidden; }
 
 html .half_container,
 body .half_container {
@@ -169,12 +169,14 @@ body nav .search {
 html nav .search input,
 body nav .search input {
   padding: .5rem;
-  border-radius: 6px; }
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  font-size: 12px; }
 
 html nav .search input::placeholder,
 body nav .search input::placeholder {
-  font-size: 12px;
-  padding: 0px 0px 0px 4px; }
+  padding: 0px 0px 0px 2px; }
 
 html nav .search div,
 body nav .search div {
