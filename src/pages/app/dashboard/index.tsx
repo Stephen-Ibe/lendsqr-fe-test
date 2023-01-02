@@ -4,6 +4,7 @@ import { HiBriefcase, HiOutlineUsers } from 'react-icons/hi';
 import fetchUsersRecords from '../../../utils/apis/User';
 import TopNav from '../../../components/blocks/topnav';
 import UserIcon from '../../../assets/images/users.png';
+import Card from '../../../components/common/card';
 
 type Props = {};
 
@@ -47,30 +48,11 @@ const Dashboard = (props: Props) => {
             <h1 className='text-2xl font-extrabold'>User</h1>
           </div>
           <div className='gap-14 stats'>
-            <div className='space-y-3 card'>
+            <Card>
               <HiOutlineUsers size={40} />
-
               <h4>Users</h4>
               <p>2453</p>
-            </div>
-            <div className='space-y-3 card'>
-              <HiOutlineUsers size={40} />
-
-              <h4>Users</h4>
-              <p>2453</p>
-            </div>
-            <div className='space-y-3 card'>
-              <HiOutlineUsers size={40} />
-
-              <h4>Users</h4>
-              <p>2453</p>
-            </div>
-            <div className='space-y-3 card'>
-              <HiOutlineUsers size={40} />
-
-              <h4>Users</h4>
-              <p>2453</p>
-            </div>
+            </Card>
           </div>
         </section>
       </main>
