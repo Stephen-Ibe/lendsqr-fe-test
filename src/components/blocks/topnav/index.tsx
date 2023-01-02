@@ -9,7 +9,7 @@ type Props = {};
 
 const TopNav = (props: Props) => (
   <div className='fixed top-0 z-30 w-full'>
-    <nav>
+    <nav className='nav'>
       <div>
         <img src={Logo} alt='logo' />
       </div>

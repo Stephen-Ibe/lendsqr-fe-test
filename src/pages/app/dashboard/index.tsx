@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { IoIosArrowDown } from 'react-icons/io';
-import { HiBriefcase } from 'react-icons/hi';
+
 import fetchUsersRecords from '../../../utils/apis/User';
 import TopNav from '../../../components/blocks/topnav';
 import Card from '../../../components/common/card';
@@ -9,6 +8,7 @@ import UserIcon from '../../../assets/images/users.png';
 import UsersIcon from '../../../assets/images/user.png';
 import LoanIcon from '../../../assets/images/loan.png';
 import MoneyIcon from '../../../assets/images/money.png';
+import Sidebar from '../../../components/blocks/sidebar';
 
 type Props = {};
 
@@ -52,18 +52,10 @@ const Dashboard = (props: Props) => {
     <div className='relative flex flex-col'>
       <TopNav />
       <main>
-        <aside>
-          <div className='sidebar_content'>
-            <div className='organization'>
-              <HiBriefcase size={20} />
-              <p>Switch Organisation</p>
-              <IoIosArrowDown />
-            </div>
-          </div>
-        </aside>
+        <Sidebar />
         <section className='main_content'>
           <div className='heading'>
-            <h1 className='text-2xl font-extrabold'>User</h1>
+            <h1>User</h1>
           </div>
           <div className='gap-14 stats'>
             {stats.map(({ id, icon, title, value }: StatsType) => (
