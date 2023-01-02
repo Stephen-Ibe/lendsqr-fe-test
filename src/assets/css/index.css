@@ -259,9 +259,10 @@ body main .main_content .stats .card {
   height: 160px;
   padding: 1.2rem 2rem; }
 
-html main .main_content .stats .card svg,
-body main .main_content .stats .card svg {
+html main .main_content .stats .card .card_icon,
+body main .main_content .stats .card .card_icon {
   border-width: 1px;
+  width: fit-content;
   padding: 10px;
   border-radius: 50%; }
 

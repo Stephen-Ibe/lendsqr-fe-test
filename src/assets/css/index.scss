@@ -252,8 +252,9 @@ body {
           height: 160px;
           padding: 1.2rem 2rem;
 
-          svg {
+          .card_icon {
             border-width: 1px;
+            width: fit-content;
             padding: 10px;
             border-radius: 50%;
           }

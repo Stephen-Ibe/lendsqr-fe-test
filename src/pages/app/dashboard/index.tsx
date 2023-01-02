@@ -1,11 +1,14 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
-import { HiBriefcase, HiOutlineUsers } from 'react-icons/hi';
+import { HiBriefcase } from 'react-icons/hi';
 import fetchUsersRecords from '../../../utils/apis/User';
 import TopNav from '../../../components/blocks/topnav';
-import UserIcon from '../../../assets/images/users.png';
 import Card from '../../../components/common/card';
 import numberFormat from '../../../utils/formatNumber';
+import UserIcon from '../../../assets/images/users.png';
+import UsersIcon from '../../../assets/images/user.png';
+import LoanIcon from '../../../assets/images/loan.png';
+import MoneyIcon from '../../../assets/images/money.png';
 
 type Props = {};
 
@@ -13,14 +16,14 @@ type StatsType = {
   id: number;
   title: string;
   value: number;
-  icon: ReactNode;
+  icon: any;
 };
 
 const stats = [
   { id: 0, title: 'Users', value: 2453, icon: UserIcon },
-  { id: 1, title: 'Active Users', value: 2453 },
-  { id: 2, title: 'Users with Loans', value: 12453 },
-  { id: 3, title: 'Users with Savings', value: 102453 },
+  { id: 1, title: 'Active Users', value: 2453, icon: UsersIcon },
+  { id: 2, title: 'Users with Loans', value: 12453, icon: LoanIcon },
+  { id: 3, title: 'Users with Savings', value: 102453, icon: MoneyIcon },
 ] as StatsType[];
 
 const Dashboard = (props: Props) => {
@@ -63,12 +66,11 @@ const Dashboard = (props: Props) => {
             <h1 className='text-2xl font-extrabold'>User</h1>
           </div>
           <div className='gap-14 stats'>
-            {stats.map(({ id, title, value }: StatsType) => (
+            {stats.map(({ id, icon, title, value }: StatsType) => (
               <Card key={id}>
                 <div className='card_icon'>
-                  <HiOutlineUsers size={40} />
+                  <img src={icon} alt='icon' />
                 </div>
-
                 <h4>{title}</h4>
                 <p>{numberFormat(value)}</p>
               </Card>
