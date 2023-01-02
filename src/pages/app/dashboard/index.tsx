@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
-import { HiBriefcase } from 'react-icons/hi';
+import { HiBriefcase, HiOutlineUsers } from 'react-icons/hi';
 import fetchUsersRecords from '../../../utils/apis/User';
 import TopNav from '../../../components/blocks/topnav';
 import UserIcon from '../../../assets/images/users.png';
@@ -46,11 +46,28 @@ const Dashboard = (props: Props) => {
           <div className='heading'>
             <h1 className='text-2xl font-extrabold'>User</h1>
           </div>
-          <div className='stats'>
-            <div className='p-4 space-y-4 card'>
-              <div className='p-2 rounded-full card_img w-fit'>
-                <img src={UserIcon} alt='users_icon' />
-              </div>
+          <div className='gap-14 stats'>
+            <div className='space-y-3 card'>
+              <HiOutlineUsers size={40} />
+
+              <h4>Users</h4>
+              <p>2453</p>
+            </div>
+            <div className='space-y-3 card'>
+              <HiOutlineUsers size={40} />
+
+              <h4>Users</h4>
+              <p>2453</p>
+            </div>
+            <div className='space-y-3 card'>
+              <HiOutlineUsers size={40} />
+
+              <h4>Users</h4>
+              <p>2453</p>
+            </div>
+            <div className='space-y-3 card'>
+              <HiOutlineUsers size={40} />
+
               <h4>Users</h4>
               <p>2453</p>
             </div>
