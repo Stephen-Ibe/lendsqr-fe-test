@@ -8,6 +8,17 @@ import Card from '../../../components/common/card';
 
 type Props = {};
 
+type StatsType = {
+  [key: string]: string | number;
+};
+
+const stats = [
+  { id: 0, title: 'Users', value: '2453' },
+  { id: 1, title: 'Active Users', value: '2453' },
+  { id: 2, title: 'Users with Loans', value: '12453' },
+  { id: 3, title: 'Users with Savings', value: '102453' },
+] as StatsType[];
+
 const Dashboard = (props: Props) => {
   const [usersRecords, setUsersRecords] = useState<{
     [key: string]: any;
@@ -48,11 +59,13 @@ const Dashboard = (props: Props) => {
             <h1 className='text-2xl font-extrabold'>User</h1>
           </div>
           <div className='gap-14 stats'>
-            <Card>
-              <HiOutlineUsers size={40} />
-              <h4>Users</h4>
-              <p>2453</p>
-            </Card>
+            {stats.map(({ id, title, value }: StatsType) => (
+              <Card key={id}>
+                <HiOutlineUsers size={40} />
+                <h4>{title}</h4>
+                <p>{value}</p>
+              </Card>
+            ))}
           </div>
         </section>
       </main>
