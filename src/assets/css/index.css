@@ -7,10 +7,10 @@
   scroll-behavior: smooth; }
 
 :root {
-  --lendsqr-main: #213F7D;
-  --lendsqr-teal: #39CDCC;
-  --lendsqr-grey: #545F7D
-; }
+  --lendsqr-main: #213f7d;
+  --lendsqr-teal: #39cdcc;
+  --lendsqr-grey: #545f7d;
+  --lendsqr-pink: #df18ff; }
 
 html,
 body {
@@ -168,7 +168,7 @@ body nav .search {
 
 html nav .search input,
 body nav .search input {
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 6px;
   outline: none;
   border: none;
@@ -180,7 +180,7 @@ body nav .search input::placeholder {
 
 html nav .search div,
 body nav .search div {
-  padding: .75rem 1.2rem;
+  padding: 0.75rem 1.2rem;
   background-color: var(--lendsqr-teal);
   color: #ffffff;
   border-top-right-radius: 6px;

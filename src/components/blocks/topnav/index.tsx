@@ -8,30 +8,32 @@ import { Link } from 'react-router-dom';
 type Props = {};
 
 const TopNav = (props: Props) => (
-  <nav>
-    <div>
-      <img src={Logo} alt='logo' />
-    </div>
-    <form className='search'>
-      <input
-        type='search'
-        className='w-full'
-        placeholder='Search for anything'
-      />
+  <div className='fixed top-0 z-30 w-full'>
+    <nav>
       <div>
-        <FaSearch />
+        <img src={Logo} alt='logo' />
       </div>
-    </form>
-    <div className='actions'>
-      <Link to='/'>Docs</Link>
-      <TfiBell size={24} />
-      <img src={Avatar} alt='user_avatar' />
-      <div className='flex items-center gap-x-1'>
-        <h4>Adedeji</h4>
-        <FaCaretDown />
+      <form className='search'>
+        <input
+          type='search'
+          className='w-full'
+          placeholder='Search for anything'
+        />
+        <div>
+          <FaSearch />
+        </div>
+      </form>
+      <div className='actions'>
+        <Link to='/'>Docs</Link>
+        <TfiBell size={24} />
+        <img src={Avatar} alt='user_avatar' />
+        <div className='flex items-center gap-x-1'>
+          <h4>Adedeji</h4>
+          <FaCaretDown />
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 );
 
 export default TopNav;
