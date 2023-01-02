@@ -1,22 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { HiBriefcase, HiOutlineUsers } from 'react-icons/hi';
 import fetchUsersRecords from '../../../utils/apis/User';
 import TopNav from '../../../components/blocks/topnav';
 import UserIcon from '../../../assets/images/users.png';
 import Card from '../../../components/common/card';
+import numberFormat from '../../../utils/formatNumber';
 
 type Props = {};
 
 type StatsType = {
-  [key: string]: string | number;
+  id: number;
+  title: string;
+  value: number;
+  icon: ReactNode;
 };
 
 const stats = [
-  { id: 0, title: 'Users', value: '2453' },
-  { id: 1, title: 'Active Users', value: '2453' },
-  { id: 2, title: 'Users with Loans', value: '12453' },
-  { id: 3, title: 'Users with Savings', value: '102453' },
+  { id: 0, title: 'Users', value: 2453, icon: UserIcon },
+  { id: 1, title: 'Active Users', value: 2453 },
+  { id: 2, title: 'Users with Loans', value: 12453 },
+  { id: 3, title: 'Users with Savings', value: 102453 },
 ] as StatsType[];
 
 const Dashboard = (props: Props) => {
@@ -61,9 +65,12 @@ const Dashboard = (props: Props) => {
           <div className='gap-14 stats'>
             {stats.map(({ id, title, value }: StatsType) => (
               <Card key={id}>
-                <HiOutlineUsers size={40} />
+                <div className='card_icon'>
+                  <HiOutlineUsers size={40} />
+                </div>
+
                 <h4>{title}</h4>
-                <p>{value}</p>
+                <p>{numberFormat(value)}</p>
               </Card>
             ))}
           </div>
