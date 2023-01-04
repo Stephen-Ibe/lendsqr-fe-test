@@ -4,8 +4,9 @@ import fetchUsersRecords from '../../../utils/apis/User';
 import TopNav from '../../../components/blocks/topnav';
 import Card from '../../../components/common/card';
 import numberFormat from '../../../utils/formatNumber';
+
 import UserIcon from '../../../assets/images/users.png';
-import UsersIcon from '../../../assets/images/user.png';
+import UsersIcon from '../../../assets/images/guarantors.png';
 import LoanIcon from '../../../assets/images/loan.png';
 import MoneyIcon from '../../../assets/images/money.png';
 import Sidebar from '../../../components/blocks/sidebar';

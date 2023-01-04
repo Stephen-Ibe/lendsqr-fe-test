@@ -12,9 +12,7 @@ import {
   FaUserTimes,
   FaUsers,
 } from 'react-icons/fa';
-import { GiCarWheel, GiGalaxy } from 'react-icons/gi';
 import { HiBriefcase, HiOutlineClipboardList, HiUsers } from 'react-icons/hi';
-import { BiBadgeCheck, BiSlider } from 'react-icons/bi';
 
 import CoinsIcon from '../../../assets/images/coins-solid.png';
 import BankIcon from '../../../assets/images/bank.png';
