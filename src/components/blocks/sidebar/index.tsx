@@ -1,16 +1,34 @@
 import React, { ReactNode } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import {
+  FaChartBar,
+  FaCoins,
   FaHandshake,
   FaHome,
   FaPiggyBank,
+  FaScroll,
   FaUserCheck,
+  FaUserCog,
   FaUserTimes,
   FaUsers,
 } from 'react-icons/fa';
-import { GiCarWheel } from 'react-icons/gi';
+import { GiCarWheel, GiGalaxy } from 'react-icons/gi';
 import { HiBriefcase, HiOutlineClipboardList, HiUsers } from 'react-icons/hi';
 import { BiBadgeCheck, BiSlider } from 'react-icons/bi';
+
+import CoinsIcon from '../../../assets/images/coins-solid.png';
+import BankIcon from '../../../assets/images/bank.png';
+import LoanIcon from '../../../assets/images/loans.png';
+import BriefCaseIcon from '../../../assets/images/briefcase.png';
+import TransactionIcon from '../../../assets/images/transaction.png';
+import GalaxyIcon from '../../../assets/images/galaxy.png';
+import UserCogIcon from '../../../assets/images/user-cog.png';
+import ScrollIcon from '../../../assets/images/scroll.png';
+import ChartIcon from '../../../assets/images/chart-bar.png';
+import SliderIcon from '../../../assets/images/sliders.png';
+import PercentBadgeIcon from '../../../assets/images/badge-percent.png';
+import ClipboardListIcon from '../../../assets/images/clipboard-list.png';
+import TireIcon from '../../../assets/images/tire.png';
 
 type SidebarDataType = {
   heading: string;
@@ -18,40 +36,40 @@ type SidebarDataType = {
 };
 
 const sidebarData = [
-  {
-    heading: 'Customer',
-    links: [
-      { id: 0, title: 'Users', icon: <HiUsers /> },
-      { id: 1, title: 'Guarantors', icon: <FaUsers /> },
-      { id: 2, title: 'Loans', icon: <FaUsers /> },
-      { id: 3, title: 'Decision Models', icon: <FaHandshake /> },
-      { id: 4, title: 'Savings', icon: <FaPiggyBank /> },
-      { id: 5, title: 'Loan Requests', icon: <FaPiggyBank /> },
-      { id: 6, title: 'Whitelist', icon: <FaUserCheck /> },
-      { id: 7, title: 'Karma', icon: <FaUserTimes /> },
-    ],
-  },
+  // {
+  //   heading: 'Customer',
+  //   links: [
+  //     { id: 0, title: 'Users', icon: <HiUsers /> },
+  //     { id: 1, title: 'Guarantors', icon: <FaUsers /> },
+  //     { id: 2, title: 'Loans', icon: <FaUsers /> },
+  //     { id: 3, title: 'Decision Models', icon: <FaHandshake /> },
+  //     { id: 4, title: 'Savings', icon: <FaPiggyBank /> },
+  //     { id: 5, title: 'Loan Requests', icon: <FaPiggyBank /> },
+  //     { id: 6, title: 'Whitelist', icon: <FaUserCheck /> },
+  //     { id: 7, title: 'Karma', icon: <FaUserTimes /> },
+  //   ],
+  // },
   {
     heading: 'Businesses',
     links: [
-      { id: 0, title: 'Organization', icon: <HiUsers /> },
-      { id: 1, title: 'Loan Products', icon: <FaUserTimes /> },
-      { id: 2, title: 'Savings Products', icon: <FaUserTimes /> },
-      { id: 3, title: 'Fees and Charges', icon: <FaUserTimes /> },
-      { id: 4, title: 'Transactions', icon: <FaUserTimes /> },
-      { id: 5, title: 'Services', icon: <FaUserTimes /> },
-      { id: 6, title: 'Service Account', icon: <FaUserTimes /> },
-      { id: 7, title: 'Settlements', icon: <FaUserTimes /> },
-      { id: 8, title: 'Reports', icon: <FaUserTimes /> },
+      { id: 0, title: 'Organization', icon: BriefCaseIcon },
+      { id: 1, title: 'Loan Products', icon: LoanIcon },
+      { id: 2, title: 'Savings Products', icon: BankIcon },
+      { id: 3, title: 'Fees and Charges', icon: CoinsIcon },
+      { id: 4, title: 'Transactions', icon: TransactionIcon },
+      { id: 5, title: 'Services', icon: GalaxyIcon },
+      { id: 6, title: 'Service Account', icon: UserCogIcon },
+      { id: 7, title: 'Settlements', icon: ScrollIcon },
+      { id: 8, title: 'Reports', icon: ChartIcon },
     ],
   },
   {
     heading: 'Settings',
     links: [
-      { id: 0, title: 'Preferences', icon: <BiSlider /> },
-      { id: 1, title: 'Fees and Pricing', icon: <BiBadgeCheck /> },
-      { id: 2, title: 'Audit Logs', icon: <HiOutlineClipboardList /> },
-      { id: 3, title: 'Systems Messages', icon: <GiCarWheel /> },
+      { id: 0, title: 'Preferences', icon: SliderIcon },
+      { id: 1, title: 'Fees and Pricing', icon: PercentBadgeIcon },
+      { id: 2, title: 'Audit Logs', icon: ClipboardListIcon },
+      { id: 3, title: 'Systems Messages', icon: TireIcon },
     ],
   },
 ] as SidebarDataType[];
@@ -76,8 +94,8 @@ const Sidebar = () => (
               <ul>
                 {data?.links.map(({ icon, title }: any) => (
                   <li>
-                    {icon}
-                    {/* <img src={icon} alt='icon' /> */}
+                    {/* {icon} */}
+                    <img src={icon} alt='icon' />
                     {title}
                   </li>
                 ))}
