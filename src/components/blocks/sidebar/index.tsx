@@ -79,7 +79,7 @@ const sidebarData = [
 
 const Sidebar = () => (
   <aside>
-    <div className='sidebar_content'>
+    <div className='sidebar_content scrollbar-hide'>
       <div className='organization'>
         <HiBriefcase size={20} />
         <p>Switch Organisation</p>

@@ -210,13 +210,20 @@ body {
       height: 100vh;
       box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
 
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
 
       .sidebar_content {
         position: fixed;
         height: 100vh;
         padding: 2.5rem 1rem 5rem 1rem;
         overflow-y: auto;
-
 
         .organization {
           display: flex;
@@ -238,7 +245,7 @@ body {
           h4 {
             text-transform: uppercase;
             font-size: 12px;
-            margin: .5rem 0rem;
+            margin: 0.5rem 0rem;
           }
 
           nav ul li {
@@ -272,16 +279,16 @@ body {
         display: grid;
         grid-template-columns: repeat(1, minmax(0, 1fr));
 
-        @media screen and (min-width:768px) {
+        @media screen and (min-width: 768px) {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        @media screen and (min-width:1024px) {
+        @media screen and (min-width: 1024px) {
           grid-template-columns: repeat(4, minmax(0, 1fr));
         }
 
         .card {
-          background: #FFFFFF;
+          background: #ffffff;
           border: 1px solid rgba(33, 63, 125, 0.06);
           box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
           border-radius: 4px;
