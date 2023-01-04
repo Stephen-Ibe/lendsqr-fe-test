@@ -14,6 +14,11 @@ import {
 } from 'react-icons/fa';
 import { HiBriefcase, HiOutlineClipboardList, HiUsers } from 'react-icons/hi';
 
+import DecisionModelIcon from '../../../assets/images/decision.png';
+import PiggyBankIcon from '../../../assets/images/piggy.png';
+import LoanRequestsIcon from '../../../assets/images/sack.png';
+import UserCheckIcon from '../../../assets/images/user-check.png';
+import UserTimesIcon from '../../../assets/images/user-times.png';
 import CoinsIcon from '../../../assets/images/coins-solid.png';
 import BankIcon from '../../../assets/images/bank.png';
 import LoanIcon from '../../../assets/images/loans.png';
@@ -34,19 +39,19 @@ type SidebarDataType = {
 };
 
 const sidebarData = [
-  // {
-  //   heading: 'Customer',
-  //   links: [
-  //     { id: 0, title: 'Users', icon: <HiUsers /> },
-  //     { id: 1, title: 'Guarantors', icon: <FaUsers /> },
-  //     { id: 2, title: 'Loans', icon: <FaUsers /> },
-  //     { id: 3, title: 'Decision Models', icon: <FaHandshake /> },
-  //     { id: 4, title: 'Savings', icon: <FaPiggyBank /> },
-  //     { id: 5, title: 'Loan Requests', icon: <FaPiggyBank /> },
-  //     { id: 6, title: 'Whitelist', icon: <FaUserCheck /> },
-  //     { id: 7, title: 'Karma', icon: <FaUserTimes /> },
-  //   ],
-  // },
+  {
+    heading: 'Customer',
+    links: [
+      //     { id: 0, title: 'Users', icon: <HiUsers /> },
+      //     { id: 1, title: 'Guarantors', icon: <FaUsers /> },
+      //     { id: 2, title: 'Loans', icon: <FaUsers /> },
+      //     { id: 3, title: 'Decision Models', icon: <FaHandshake /> },
+      { id: 4, title: 'Savings', icon: PiggyBankIcon },
+      { id: 5, title: 'Loan Requests', icon: LoanRequestsIcon },
+      { id: 6, title: 'Whitelist', icon: UserCheckIcon },
+      { id: 7, title: 'Karma', icon: UserTimesIcon },
+    ],
+  },
   {
     heading: 'Businesses',
     links: [
@@ -92,8 +97,7 @@ const Sidebar = () => (
               <ul>
                 {data?.links.map(({ icon, title }: any) => (
                   <li>
-                    {/* {icon} */}
-                    <img src={icon} alt='icon' />
+                    <img src={icon} alt='icon' loading='lazy' />
                     {title}
                   </li>
                 ))}
