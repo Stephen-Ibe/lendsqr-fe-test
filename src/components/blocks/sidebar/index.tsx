@@ -8,7 +8,9 @@ import {
   FaUserTimes,
   FaUsers,
 } from 'react-icons/fa';
-import { HiBriefcase, HiUsers } from 'react-icons/hi';
+import { GiCarWheel } from 'react-icons/gi';
+import { HiBriefcase, HiOutlineClipboardList, HiUsers } from 'react-icons/hi';
+import { BiBadgeCheck, BiSlider } from 'react-icons/bi';
 
 type SidebarDataType = {
   heading: string;
@@ -46,17 +48,17 @@ const sidebarData = [
   {
     heading: 'Settings',
     links: [
-      { id: 0, title: 'Preferences', icon: <HiUsers /> },
-      { id: 1, title: 'Fees and Pricing', icon: <HiUsers /> },
-      { id: 2, title: 'Audit Logs', icon: <HiUsers /> },
-      { id: 3, title: 'Systems Messages', icon: <HiUsers /> },
+      { id: 0, title: 'Preferences', icon: <BiSlider /> },
+      { id: 1, title: 'Fees and Pricing', icon: <BiBadgeCheck /> },
+      { id: 2, title: 'Audit Logs', icon: <HiOutlineClipboardList /> },
+      { id: 3, title: 'Systems Messages', icon: <GiCarWheel /> },
     ],
   },
 ] as SidebarDataType[];
 
 const Sidebar = () => (
   <aside>
-    <div className='overflow-y-auto sidebar_content'>
+    <div className='sidebar_content'>
       <div className='organization'>
         <HiBriefcase size={20} />
         <p>Switch Organisation</p>
@@ -75,6 +77,7 @@ const Sidebar = () => (
                 {data?.links.map(({ icon, title }: any) => (
                   <li>
                     {icon}
+                    {/* <img src={icon} alt='icon' /> */}
                     {title}
                   </li>
                 ))}
