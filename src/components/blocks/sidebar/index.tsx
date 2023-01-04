@@ -11,11 +11,8 @@ import {
 import { HiBriefcase, HiUsers } from 'react-icons/hi';
 
 type SidebarDataType = {
-  [key: string]:
-    | string
-    | number
-    | { id: number; title: string; icon: any }[]
-    | ReactNode;
+  heading: string;
+  links: { id: number; title: string; icon: any }[];
 };
 
 const sidebarData = [
@@ -46,7 +43,7 @@ const sidebarData = [
       { id: 8, title: 'Reports', icon: <FaUserTimes /> },
     ],
   },
-];
+] as SidebarDataType[];
 
 const Sidebar = () => (
   <aside>
@@ -66,7 +63,7 @@ const Sidebar = () => (
             <h4>{data.heading}</h4>
             <nav>
               <ul>
-                {data.links.map(({ icon, title }: any) => (
+                {data?.links.map(({ icon, title }: any) => (
                   <li>
                     {icon}
                     {title}
