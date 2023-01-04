@@ -43,6 +43,15 @@ const sidebarData = [
       { id: 8, title: 'Reports', icon: <FaUserTimes /> },
     ],
   },
+  {
+    heading: 'Settings',
+    links: [
+      { id: 0, title: 'Preferences', icon: <HiUsers /> },
+      { id: 1, title: 'Fees and Pricing', icon: <HiUsers /> },
+      { id: 2, title: 'Audit Logs', icon: <HiUsers /> },
+      { id: 3, title: 'Systems Messages', icon: <HiUsers /> },
+    ],
+  },
 ] as SidebarDataType[];
 
 const Sidebar = () => (
